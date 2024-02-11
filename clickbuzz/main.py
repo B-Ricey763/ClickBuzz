@@ -5,6 +5,7 @@ import taipy as tp
 
 import joblib
 import xgboost
+import numpy as np
 
 scenario = None
 
@@ -23,12 +24,12 @@ def on_submit(state):
 
 def get_score(title):
     loaded_model= joblib.load('model.joblib')
-    score = min((loaded_model.predict([title])[0]/3 + 0.666), 1.0)
-    print(score)
+    raw_score = loaded_model.predict([title])[0]
+    score = min((raw_score/2 + np.log1p(raw_score)), 1.0)
     return score
 
 def get_grade(outScore):
-    outScore *= 100
+    outScore =int(outScore * 100)
     outGrade = ""
     if outScore >= 90:
         outGrade = "A"
@@ -42,9 +43,9 @@ def get_grade(outScore):
         outGrade = "F"
     
     # Determine if it's a + or -
-    if outScore % 10 >= 7 and outGrade != "F":
+    if (outScore % 10 >= 7 and outGrade != "F") or outScore > 97:
         outGrade += "+"
-    elif outScore % 10 <= 3 and outGrade != "F":
+    elif outScore % 10 <= 3 and outGrade != "F" and outScore != 100:
         outGrade += "-"
 
     return outGrade
