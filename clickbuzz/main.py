@@ -26,16 +26,16 @@ title2 = ""
 best_title_text = "Need to submit"
 
 manual_md = """
-# Manual Entry 
+# Welcome to ClickBUZZ!
 
-## Titles: \n
+## Input Your A|B Titles \n
 A  <|{title1}|input|> \n 
 B  <|{title2}|input|> \n
 
 
 <|Submit|button|on_action=on_submit|id=button_submit|> \n
 
-## Best Title \n
+## Winning Title \n
                      
 <|{best_title_text}|text|>
 """
