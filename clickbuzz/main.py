@@ -28,25 +28,20 @@ title5 = ""
 best_title_text = "Need to submit"
 
 manual_md = """
-<|layout|
-<|align-item-center|
 # Manual Entry 
 
 ## Titles: \n
-Title 1: <|{title1}|input|> \n 
-Title 2: <|{title2}|input|> \n
-Title 3: <|{title3}|input|> \n
-Title 4: <|{title4}|input|> \n
-Title 5: <|{title5}|input|> \n
+1  <|{title1}|input|> \n 
+2  <|{title2}|input|> \n
+3  <|{title3}|input|> \n
+4  <|{title4}|input|> \n
+5  <|{title5}|input|> \n
 
-<|Submit|button|on_action=on_submit|> \n
-|>
-<|
+<|Submit|button|on_action=on_submit|id=button_submit|> \n
+
 ## Best Title \n
                      
 <|{best_title_text}|text|>
-|>
-|>
 """
 
 generative_md = """
@@ -56,7 +51,7 @@ Ooh AI
 """
 
 pages = {
-    "/": "<|navbar|>",
+    "/": "<|navbar|id=nav_bar|>",
     "manual": manual_md,
     "generative": generative_md,
 }

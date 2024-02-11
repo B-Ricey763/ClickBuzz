@@ -1,0 +1,15 @@
+:root {
+    font-size: 1.5rem;
+    margin:auto;
+    text-align: center;
+    align-items: center;
+  }
+
+#nav_bar {
+    justify-content: center;
+    align-items: center;
+  }
+
+#button_submit {
+    margin-top:0.75rem;
+  }

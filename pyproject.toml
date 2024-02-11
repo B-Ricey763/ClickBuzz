@@ -6,7 +6,7 @@ authors = ["B-Ricey763 <39998963+B-Ricey763@users.noreply.github.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "3.11.5"
 taipy = "^3.0.0"
 
 
