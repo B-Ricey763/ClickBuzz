@@ -162,3 +162,5 @@ cython_debug/
 #ds store
 .DS_Store
 .data/.DS_Store
+
+.data
