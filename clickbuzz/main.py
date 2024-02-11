@@ -21,9 +21,7 @@ scenario_cfg = Config.configure_scenario("scenario", task_configs=[get_best_cfg]
 
 title1 = ""
 title2 = ""
-title3 = ""
-title4 = ""
-title5 = ""
+
 
 best_title_text = "Need to submit"
 
@@ -31,11 +29,9 @@ manual_md = """
 # Manual Entry 
 
 ## Titles: \n
-1  <|{title1}|input|> \n 
-2  <|{title2}|input|> \n
-3  <|{title3}|input|> \n
-4  <|{title4}|input|> \n
-5  <|{title5}|input|> \n
+A  <|{title1}|input|> \n 
+B  <|{title2}|input|> \n
+
 
 <|Submit|button|on_action=on_submit|id=button_submit|> \n
 
@@ -44,16 +40,23 @@ manual_md = """
 <|{best_title_text}|text|>
 """
 
-generative_md = """
-# Generative Entry
+about_md = """
+# About
 
-Ooh AI
+####Say goodbye to guesswork and hello to precision with ClickBuzz!
+
+Introducing our cutting-edge AI machine learning model designed to revolutionize content optimization: harness the power of data-driven decision-making with our innovative platform. \n
+Our AI model analyzes user engagement metrics and provides insights into the effectiveness of your content. \n\n\n
+For the perfectly tailored video title that ensures every piece of content resonates with your audience, our AI empowers you to change the way you A|B test, leaving more time to create exciting content and connect with your audience.\n
+
+
+
 """
 
 pages = {
     "/": "<|navbar|id=nav_bar|>",
     "manual": manual_md,
-    "generative": generative_md,
+    "About": about_md ,
 }
 
 if __name__ == "__main__":

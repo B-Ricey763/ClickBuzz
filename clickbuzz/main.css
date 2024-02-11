@@ -3,6 +3,9 @@
     margin:auto;
     text-align: center;
     align-items: center;
+
+    padding-left: 10%;
+    padding-right: 10%;
   }
 
 #nav_bar {
