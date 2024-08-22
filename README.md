@@ -1,7 +1,7 @@
 # ClickBUZZ – Hackalytics 2024 Project
 
 ## About 
-##Say goodbye to guesswork and hello to precision with ClickBuzz!
+Say goodbye to guesswork and hello to precision with ClickBuzz!
 Introducing our cutting-edge AI machine learning model designed to revolutionize content optimization: harness the power of data-driven decision-making with our innovative platform.
 Our AI model analyzes user engagement metrics and provides insights into the effectiveness of your content.
 For the perfectly tailored video title that ensures every piece of content resonates with your audience, our AI empowers you to change the way you A|B test, leaving more time to create exciting content and connect with your audience.
